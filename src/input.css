@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+/* Personnalisation de base */
+
+@layer base {
+    html {
+        font-family: Lato, system-ui, sans-serif;
+    } 
+}
+
+
+
+        /* Border background */
+.body-bg-color {
+    background-image: linear-gradient(135deg, rgba(107, 107, 107,0.06) 0%, rgba(107, 107, 107,0.06) 50%,rgba(33,26,26, 0.06) 50%, rgba(33,26,26, 0.06) 100%),linear-gradient(90deg, rgb(20,20,20),rgb(20,20,20)); background-size: 30px 30px;
+}
+
+
+        /* Record buttons, active/not active player */
+.fa-solid.fa-toggle-on {
+    display: none;
+    margin: auto;
+}
+
+
+.fa-solid.fa-toggle-on.active {
+    display: block;
+}
+
+
+        /* Choose players and winner's modals */
+.margin-top-name {
+    margin-top: 14rem;
+
+}
+
+        /* Rule's modal position */
+.inset-center-from-parent {
+    position: absolute;
+    top: 22%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+  }
+
+
+        /* Current box position */
+.box-center {
+    margin-left: 20px;
+    left: 80%;
+    width: 175px;
+}
+
+ 
+
+        /* Win modal  */
+.win-modal {
+    display: none;
+}
+
+
+
+
+        /* Dice image animation */
+.dice-img.animate {
+    animation: rolling 0.5s linear;
+    -webkit-animation: rolling 0.5s linear;
+}
+      
+@keyframes rolling {
+    from {
+        transform: rotate(0deg);
+    }
+     to {
+        transform: rotate(360deg);
+        }
+}
+      
+@-webkit-keyframes rolling {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
